@@ -11,21 +11,28 @@ window.onload = function() {
   let adjectives = ["great", "big", "small", "clever", "giant", "obnoxious"];
   let nouns = ["cat", "grandma", "dog", "llama", "bird", "coworker"];
 
-  for (let i = 0; i < 1000; i++) {
-    const randomPronoun = () => {
-      return pronouns[Math.floor(Math.random() * pronouns.length)];
-    };
+  // for (let i = 0; i < 1000; i++) {
+  //   const randomPronoun = () => {
+  //     return pronouns[Math.floor(Math.random() * pronouns.length)];
+  //   };
 
-    const randomAdj = () => {
-      return adjectives[Math.floor(Math.random() * adjectives.length)];
-    };
+  //   const randomAdj = () => {
+  //     return adjectives[Math.floor(Math.random() * adjectives.length)];
+  //   };
 
-    const randomNoun = () => {
-      return nouns[Math.floor(Math.random() * nouns.length)];
-    };
+  //   const randomNoun = () => {
+  //     return nouns[Math.floor(Math.random() * nouns.length)];
+  //   };
 
-    let nameDomain = randomPronoun() + randomAdj() + randomNoun() + ".com";
+  for (let pronoun = 0; pronoun < pronouns.length; pronoun++) {
+    for (let adjective = 0; adjective < adjectives.length; adjective++) {
+      for (let noun = 0; noun < nouns.length; noun++) {
+        let nameDomain = console.log(
+          pronouns[pronoun] + adjectives[adjective] + nouns[noun] + ".com"
+        );
 
-    console.log(nameDomain);
+        // let nameDomain = randomPronoun() + randomAdj() + randomNoun() + ".com";
+      }
+    }
   }
 };
